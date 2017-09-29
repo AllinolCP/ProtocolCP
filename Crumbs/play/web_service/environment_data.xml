@@ -1,0 +1,12 @@
+<environmentData>
+
+	<!-- CP General Environment -->
+	<data name="play" value="http://media1.clubpenguin.com/play/"></data>
+	<data name="client" value="http://media1.clubpenguin.com/play/v2/client/"></data>
+	<data name="content" value="http://media1.clubpenguin.com/play/v2/content/"></data>
+	<data name="games" value="http://media1.clubpenguin.com/play/v2/games/"></data>
+	<data name="drupal" value="http://www.clubpenguin.com/"></data>
+	<data name="secured" value="https://secured.clubpenguin.com/"></data>
+	<data name="config" value="http://media2.clubpenguin.com/play/"></data>
+
+</environmentData>

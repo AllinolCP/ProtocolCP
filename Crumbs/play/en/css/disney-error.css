@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+#D_ER_ErrorSection, .D_ER_ErrorSection {
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	display: none;
+	width: 354px;
+	height: 220px;
+	z-index: 160;
+	background: url('http://media1.clubpenguin.com/play/en/images/prompt_no_button.png') 0 0 no-repeat;
+}
+
+#D_ER_ErrorMsg, .D_ER_ErrorMsg {
+	position: absolute;
+	top: 40px;
+	left: 27px;
+	width: 300px;
+	height: 60px;
+	line-height: 20px;
+	text-align: center;
+	color: black;
+	font-size: 20px;
+}
+
+#D_ER_ErrorBtn, .D_ER_ErrorBtn {
+	position: absolute;
+	top: 133px;
+	left: 96px;
+	width: 159px;
+	height: 52px;
+	line-height: 52px;
+	text-align: center;
+	color: white;
+	font-size: 22px;
+	font-weight: bold;
+	text-decoration: none;
+	outline: none;
+	border: 0;
+	background: url('http://media1.clubpenguin.com/play/en/images/prompt_button_up.png') 0 0 no-repeat;
+}
+
+#D_ER_ErrorBtn:hover, .D_ER_ErrorBtn:hover {
+	background-image: url('http://media1.clubpenguin.com/play/en/images/prompt_button_over.png');
+}
+
+#D_ER_ErrorBtn:active, .D_ER_ErrorBtn:active {
+	background-image: url('http://media1.clubpenguin.com/play/en/images/prompt_button_down.png');
+}
+

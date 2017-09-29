@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section id="START">
+	
+	<button_list type="array">
+		
+		<button id="start_button" classpath="com:clubpenguin:web:play:startscreen:view:ui:LoginButton" href="login/" target="_top" x="410" y="395" fontSize="20">##Login##</button>
+		
+		<button id="create_button" classpath="com:clubpenguin:web:play:startscreen:view:ui:CreateAccountButton" href="create/" target="_top" x="180" y="395" fontSize="18">##Create a Penguin##</button>
+		
+		<button id="membership_button" classpath="com:clubpenguin:web:play:startscreen:view:ui:MembershipButton" href="http://www.clubpenguin.com/en/membership/" target="_top" x="440" y="287" fontSize="8">##Learn More About Membership##</button>
+	
+		<button id="logo_button" classpath="com:clubpenguin:web:play:startscreen:view:ui:LogoButton" href="http://www.clubpenguin.com/en/" x="380" y="305" target="_top"/>
+		
+	</button_list>
+	
+	<legal>&#x200B;</legal>
+	
+</section>
