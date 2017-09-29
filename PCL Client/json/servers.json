@@ -1,0 +1,17 @@
+{
+	"cpb": {
+		"ip": "45.32.236.156",
+		"login": 2,
+		"magic": "a1ebe00441f5aecb185d0ec178ca2305Y(02.>'H}t\":E1_root",
+		"servers": {
+			"uk": 3
+		}
+	},
+	"PL": {
+		"ip": "45.77.112.189",
+		"login": 9270,
+		"servers": {
+			"blizzard": 4046
+		}
+	}
+}
