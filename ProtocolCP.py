@@ -8,6 +8,7 @@ class MyPrompt(Cmd):
 
     def do_blackhole(self, args):
         print('''
+            Note: Blachole is known for it's famous coin glitch. There's a fix on Aureus by Jad.
             %xt%jnbhg%{$this->internalId}%{$this->externalId}%
             %xt%lnbhg%{$penguin->room->internalId}%{$penguin->room->externalId}%
             %xt%jg%{$this->internalId}%{$this->externalId}%
@@ -37,11 +38,38 @@ class MyPrompt(Cmd):
             %xt%epfgf%-1%1%
             ''')
 
-    #-------#
-    # Party #
-    #-------#
 
-    def do_party(self, args):
+    #-----------#
+    # Halloween #
+    #-----------#
+
+    def do_halloween(self, args):
+        print('''
+        ***Handlers***
+        halloween#collectquestitem => handleHalloweenCollectQuestItems
+        halloween#partycookie => handleReturnHalloweenPartyCookie
+        halloween#msgviewed => handleHalloweenMessageViewed
+        halloween#visitedfloor12 => handleFloor12
+        ***Packets***
+        halloween#partycookie: $penguin->send('%xt%partycookie%-1%{"msgViewedArray":' . $msgs . ',"questTaskStatus":' . $quest . ',"visitedFloor12":' . $visited . '}%');
+        ***Database***
+        $lol = $penguin->database->getColumnById($penguin->id, 'halloweenmsg');
+        $penguin->database->updateColumnByid($penguin->id, 'halloweenmsg', $newmsg);
+        $lol = $penguin->database->getColumnById($penguin->id, 'halloweenquest');
+        $penguin->database->updateColumnByid($penguin->id, 'halloweenquest', $newmsg);
+        $penguin->database->updateColumnByid($penguin->id, 'halloweenvisited', '1');
+        ***Login***
+        $penguin->send("%xt%js%-1%1%{$penguin->EPF['status']}%$isModerator%1%");
+        $penguin->send("%xt%activefeatures%-1%20141002%"); // Part of halloween
+        $penguin->send('%xt%partyservice%-1%{"partySettings":{"partyIglooItems":[0],"unlockDayIndex":15,"numOfDaysInParty":14},"questSettingList":[{"roomId":851,"questItemIndex":0,"unlockDay":0},{"roomId":852,"questItemIndex":1,"unlockDay":0},{"roomId":853,"questItemIndex":2,"unlockDay":1},{"roomId":854,"questItemIndex":3,"unlockDay":1},{"roomId":855,"questItemIndex":-1,"unlockDay":0},{"roomId":856,"questItemIndex":4,"unlockDay":2},{"roomId":857,"questItemIndex":5,"unlockDay":2},{"roomId":858,"questItemIndex":-1,"unlockDay":3},{"roomId":859,"questItemIndex":6,"unlockDay":3},{"roomId":891,"questItemIndex":-1,"unlockDay":0},{"roomId":892,"questItemIndex":7,"unlockDay":3},{"roomId":430,"questItemIndex":-1,"unlockDay":0},{"roomId":431,"questItemIndex":-1,"unlockDay":0},{"roomId":432,"questItemIndex":-1,"unlockDay":0}],"rewardList":[{"roomId":855,"rewardId":1,"unlockDay":0,"memberItemId":3219,"nonmemberItemId":5485},{"roomId":855,"rewardId":2,"unlockDay":2,"memberItemId":24212,"nonmemberItemId":1932},{"roomId":855,"rewardId":3,"unlockDay":4,"memberItemId":2163,"nonmemberItemId":5483},{"roomId":858,"rewardId":4,"unlockDay":6,"memberItemId":24213,"nonmemberItemId":5481},{"roomId":858,"rewardId":5,"unlockDay":8,"memberItemId":5480,"nonmemberItemId":5484},{"roomId":858,"rewardId":6,"unlockDay":10,"memberItemId":24214,"nonmemberItemId":5482},{"roomId":892,"rewardId":7,"unlockDay":-1,"memberItemId":0,"nonmemberItemId":1931}],"ghostCatchRoom":860,"finaleRoom":861}%'); // Part of halloween
+        
+        ''')
+
+    #--------#
+    # Frozen #
+    #--------#
+
+    def do_frozen(self, args):
         print('''
             ***Handlers***
             frozen#partycookie => handlePartyCookie
@@ -426,8 +454,8 @@ class MyPrompt(Cmd):
     # Inventory #
     #-----------#
 
-    def do_inventory(self, args)
-    print('''
+    def do_inventory(self, args):
+        print('''
     	***Handlers***
     	i#gi => handleGetInventory
     	i#ai => handleBuyInventory
@@ -446,7 +474,7 @@ class MyPrompt(Cmd):
     #-------------------------#
 
     def do_stamps(self, args):
-    	print('''
+        print('''
     		***Handlers***
     		i#qpp => handleGetPlayerPins
     		i#qpa => handleGetPlayerAwards
